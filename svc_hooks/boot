@@ -1,0 +1,12 @@
+#!/bin/bash
+###
+### boot - service hook for booting up services; called by
+### /etc/init.d/services_startup
+###
+
+# Load environment variables
+HOME=/home/lib-medusa-dls
+. $HOME/.bashrc
+
+# Start Rails
+$HOME/bin/start-rails

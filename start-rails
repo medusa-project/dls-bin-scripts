@@ -1,0 +1,13 @@
+#!/bin/bash --login
+
+source $HOME/bin/env.sh
+
+# Start Passenger
+( cd $DLS_HOME ; bundle install ; bundle exec passenger start -p 3000 -e $RAILS_ENV -d )
+
+# Start Delayed Job
+( cd $DLS_HOME ; bin/delayed_job start default 1 )
+( cd $DLS_HOME ; bin/delayed_job start download 1 )
+( cd $DLS_HOME ; bin/delayed_job start download 2 )
+
+exit 0

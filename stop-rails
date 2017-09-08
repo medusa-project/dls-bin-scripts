@@ -1,0 +1,11 @@
+#!/bin/bash --login
+
+source $HOME/bin/env.sh
+
+# Stop Passenger
+( cd $DLS_HOME ; bundle exec passenger stop -p 3000 )
+
+# Stop Delayed Job
+( cd $DLS_HOME ; bin/delayed_job stop )
+
+exit 0

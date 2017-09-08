@@ -1,0 +1,2 @@
+Clone this into /home/lib-medusa-dls/bin, then link the svc_hooks
+subdirectory to /home/lib-medusa-dls/svc_hooks.
