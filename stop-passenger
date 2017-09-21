@@ -2,7 +2,6 @@
 
 source $HOME/bin/env.sh
 
-( ~/bin/stop-delayed-job )
-( ~/bin/stop-passenger )
+( cd $DLS_HOME ; bundle exec passenger stop -p 3000 )
 
 exit 0

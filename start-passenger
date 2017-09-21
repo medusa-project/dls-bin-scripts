@@ -1,0 +1,7 @@
+#!/bin/bash --login
+
+source $HOME/bin/env.sh
+
+( cd $DLS_HOME ; bundle install ; bundle exec passenger start -p 3000 -e $RAILS_ENV -d )
+
+exit 0

@@ -1,13 +1,11 @@
 #!/bin/bash --login
+#
+# Starts the entire application including the webserver and job workers.
+#
 
 source $HOME/bin/env.sh
 
-# Start Passenger
-( cd $DLS_HOME ; bundle install ; bundle exec passenger start -p 3000 -e $RAILS_ENV -d )
-
-# Start Delayed Job
-( ~/bin/delayed_job start default 1 )
-( ~/bin/delayed_job start download 1 )
-( ~/bin/delayed_job start download 2 )
+( ~/bin/start-passenger )
+( ~/bin/start-delayed-job )
 
 exit 0

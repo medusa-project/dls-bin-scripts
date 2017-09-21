@@ -8,5 +8,4 @@
 HOME=/home/lib-medusa-dls
 . $HOME/.bashrc
 
-# Start Rails
 $HOME/bin/start-rails

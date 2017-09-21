@@ -8,5 +8,4 @@
 HOME=/home/lib-medusa-dls
 . $HOME/.bashrc
 
-# Stop Rails
 $HOME/bin/stop-rails

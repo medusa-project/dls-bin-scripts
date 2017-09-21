@@ -1,0 +1,9 @@
+#!/bin/bash --login
+
+source $HOME/bin/env.sh
+
+( ~/bin/delayed_job stop default 1 )
+( ~/bin/delayed_job stop download 1 )
+( ~/bin/delayed_job stop download 2 )
+
+exit 0
