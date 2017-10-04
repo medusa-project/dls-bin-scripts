@@ -2,6 +2,11 @@
 
 source $HOME/bin/env.sh
 
-( cd $DLS_HOME ; bundle install ; bundle exec passenger start -p 3000 -e $RAILS_ENV -d )
+( cd $DLS_HOME ;
+  bundle install ;
+
+  # See: https://www.phusionpassenger.com/library/config/standalone/optimization/
+  bundle exec passenger start -p 3000 -e $RAILS_ENV \
+      --max-pool-size=56 --min-instances=56 -d )
 
 exit 0
