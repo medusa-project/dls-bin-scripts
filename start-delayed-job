@@ -2,7 +2,7 @@
 
 source $HOME/bin/env.sh
 
-( ~/bin/delayed_job start default 1 )
+( ~/bin/delayed_job start admin 1 )
 ( ~/bin/delayed_job start download 1 )
 ( ~/bin/delayed_job start download 2 )
 
