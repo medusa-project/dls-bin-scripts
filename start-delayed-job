@@ -2,6 +2,18 @@
 
 source $HOME/bin/env.sh
 
+ADMIN_PIDFILE=$DLS_HOME/tmp/pids/delayed_job/admin/delayed_job.1.pid
+DOWNLOAD_1_PIDFILE=$DLS_HOME/tmp/pids/delayed_job/download/delayed_job.1.pid
+DOWNLOAD_2_PIDFILE=$DLS_HOME/tmp/pids/delayed_job/download/delayed_job.2.pid
+
+for pidfile in $ADMIN_PIDFILE $DOWNLOAD_1_PIDFILE DOWNLOAD_2_PIDFILE; do
+    if [ -f $pidfile ]; then
+        echo "Already exists: $pidfile"
+        echo "Aborting"
+        exit -1
+    fi
+done
+
 ( ~/bin/delayed_job start admin 1 )
 ( ~/bin/delayed_job start download 1 )
 ( ~/bin/delayed_job start download 2 )
