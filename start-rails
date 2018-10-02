@@ -11,4 +11,7 @@ source $HOME/bin/env.sh
 ( ~/bin/start-passenger )
 ( ~/bin/start-delayed-job )
 
+killall monit
+monit -d 60
+
 exit 0

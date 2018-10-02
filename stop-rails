@@ -2,6 +2,8 @@
 
 source $HOME/bin/env.sh
 
+killall monit
+
 ( ~/bin/stop-delayed-job )
 ( ~/bin/stop-passenger )
 
