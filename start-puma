@@ -1,0 +1,10 @@
+#!/bin/bash --login
+
+source $HOME/bin/env.sh
+
+( cd $DLS_HOME ;
+  bundle install ;
+
+  bundle exec pumactl -F config/puma.rb start )
+
+exit 0
