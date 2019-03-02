@@ -8,7 +8,7 @@ source $HOME/bin/env.sh
 # Clean up any stale pid files, otherwise DJ won't start.
 ( ~/bin/stop-delayed-job )
 
-( ~/bin/start-puma )
+( ~/bin/start-passenger )
 ( ~/bin/start-delayed-job )
 
 killall monit

@@ -5,6 +5,6 @@ source $HOME/bin/env.sh
 killall monit
 
 ( ~/bin/stop-delayed-job )
-( ~/bin/stop-puma )
+( ~/bin/stop-passenger )
 
 exit 0
