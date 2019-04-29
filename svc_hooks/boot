@@ -5,7 +5,7 @@
 ###
 
 # Load environment variables
-HOME=/home/lib-medusa-dls
+HOME=/home/dls
 . $HOME/.bashrc
 
 $HOME/bin/start-rails
