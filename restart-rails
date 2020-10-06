@@ -1,0 +1,7 @@
+#!/bin/bash --login
+#
+# Restarts the entire application including the webserver and job workers.
+#
+
+./stop-rails
+./start-rails
