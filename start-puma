@@ -1,0 +1,9 @@
+#!/bin/bash --login
+
+source $HOME/bin/env.sh
+
+( cd $DLS_HOME ;
+  bundle install ;
+  # N.B.: Puma's config file is in app/config/puma.rb
+  bin/rails server -e $RAILS_ENV -p 3000 -d )
+exit 0
