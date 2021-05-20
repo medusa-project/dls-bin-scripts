@@ -5,5 +5,5 @@ source $HOME/bin/env.sh
 PIDFILE=$DLS_HOME/tmp/pids/server.pid
 
 if [ -f $PIDFILE ]; then
-    kill $(cat $PIDFILE)
+    kill -9 $(cat $PIDFILE)
 fi
