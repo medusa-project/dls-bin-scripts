@@ -8,4 +8,7 @@
 HOME=/home/dls
 . $HOME/.bashrc
 
+# (In case it didn't shut down cleanly)
+rm -f $HOME/kumquat/tmp/pids/server.pid
+
 $HOME/bin/start-rails
