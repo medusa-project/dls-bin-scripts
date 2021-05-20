@@ -2,6 +2,8 @@
 #
 # Restarts the entire application including the webserver and job workers.
 #
+MY_PATH="`dirname \"$0\"`"
+pushd "$MY_PATH" > /dev/null
 
 ./stop-rails
 ./start-rails
