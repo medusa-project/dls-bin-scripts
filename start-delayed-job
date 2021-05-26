@@ -2,6 +2,7 @@
 
 source $HOME/bin/env.sh
 
+export DELAYED_JOB=1
 ADMIN_PIDFILE=$DLS_HOME/tmp/pids/delayed_job/admin/delayed_job.1.pid
 DOWNLOAD_1_PIDFILE=$DLS_HOME/tmp/pids/delayed_job/download/delayed_job.1.pid
 DOWNLOAD_2_PIDFILE=$DLS_HOME/tmp/pids/delayed_job/download/delayed_job.2.pid
